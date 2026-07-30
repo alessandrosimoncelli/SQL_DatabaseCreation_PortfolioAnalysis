@@ -10,23 +10,27 @@ Individual Final Assessment in SQL & Data Management.
 ## Client Portfolio
 
 | Ticker | Name                              | Allocation | Asset Class   |
+|--------|-----------------------------------|-----------:|---------------|
 | IXN    | iShares Global Tech ETF           |      17.5% | Equity        |
 | QQQ    | Invesco QQQ Trust (NASDAQ 100)    |      22.1% | Equity        |
 | IEF    | iShares 7-10 Year Treasury Bond   |      28.5% | Fixed Income  |
 | VNQ    | Vanguard Real Estate ETF          |       8.9% | Real Assets   |
 | GLD    | SPDR Gold Shares                  |      23.0% | Commodities   |
 
+
 ## What's in this repo
 
+```
 ├── sql/
 │   └── simoncelli_capital_analysis.sql   # Full schema + 5 parameterized stored procedures
 ├── report/
 │   └── Simoncelli_Capital_Portfolio_Analysis.pdf   # Final client-facing report (PDF)
 ├── data/
-│   └── (raw price CSVs go here - see note below)
+│   └── (raw price CSVs go here — see note below)
 ├── scripts/
-│   └── (yfinance download script goes here - see note below)
+│   └── (yfinance download script goes here — see note below)
 └── README.md
+```
 
 ## Analysis performed
 
