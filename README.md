@@ -1,7 +1,7 @@
 # SQL_DatabaseCreation_PortfolioAnalysis
 MySQL relational database + parameterized stored procedures for portfolio risk/return analysis (SQL &amp; Data Management coursework)
 
-# Simoncelli Capital - Portfolio Risk & Return Analysis
+**Simoncelli Capital - Portfolio Risk & Return Analysis**
 
 SQL-based portfolio analysis system built for a fictional Ultra High Net Worth
 client (Palo Alto, CA) holding a $95M five-ETF liquid portfolio. Built for an
