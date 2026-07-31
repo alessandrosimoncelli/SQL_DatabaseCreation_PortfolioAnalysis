@@ -61,7 +61,7 @@ period 2023-06-16 to 2026-06-15 (to avoid having huge datasets in local):
 | Sharpe ratio (36M)      |   1.367 |     1.531 |  +0.164 |
 
 Full methodology, correlation heatmaps, trade plan, and citations are in the
-[PDF report](report/Simoncelli_Capital_Portfolio_Analysis.pdf).
+[PDF report](sql_simoncelli_capital.pdf).
 
 ## Data pipeline
 
