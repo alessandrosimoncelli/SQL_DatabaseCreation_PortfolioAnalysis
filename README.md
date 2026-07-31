@@ -103,4 +103,4 @@ Daily adjusted close pricing was sourced via the yfinance Python API (`auto_adju
 
 ## Author
 
-Individual assessment, not a team project.
+Alessandro Simoncelli
