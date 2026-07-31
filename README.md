@@ -6,7 +6,7 @@ This project is a database engineering exercise, not a portfolio optimization to
 
 The portfolio return, risk, and Sharpe ratio analysis was included because the assignment required it to be built in SQL, but this is not how the analysis would be done in practice. In a real workflow, portfolio optimization, covariance matrices, and efficient frontier calculations would be done in Python (numpy, pandas, scipy.optimize, PyPortfolioOpt) or R (PerformanceAnalytics, quantmod), languages built for numerical and statistical computation in a way SQL isn't.
 
-All analysis metrics (returns, correlations, volatility, Sharpe ratios) were computed manually in SQL, including working around functions not natively available in this MySQL version, such as `CORR()`. The full analysis, results, charts, and recommendations are documented in the [PDF report](report/Simoncelli_Capital_Portfolio_Analysis.pdf). The `.sql` file and schema below are the main deliverable.
+All analysis metrics (returns, correlations, volatility, Sharpe ratios) were computed manually in SQL, including working around functions not natively available in this MySQL version, such as `CORR()`. The full analysis, results, charts, and recommendations are documented in the [PDF report](Client_Report_PortfolioAnalysis.pdf). The `.sql` file and schema below are the main deliverable.
 
 Built for an Individual Final Assessment in SQL & Data Management, around a fictional Ultra High Net Worth client.
 
