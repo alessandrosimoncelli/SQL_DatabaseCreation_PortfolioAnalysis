@@ -63,7 +63,7 @@ erDiagram
 | `holdings_dim` | Position value and quantity per account and ticker | `account_id_ticker` | `account_id` to accounts_dim, `ticker` to security_masterlist |
 | `pricing_daily_new` | Daily adjusted close price history | `ticker_date` | `ticker` to security_masterlist |
 
-Full DDL, including column types and constraints, is in `sql/simoncelli_capital_analysis.sql`.
+Full DDL, including column types and constraints, is in `sql_simoncelli_capital.sql`.
 
 ## What's in this repo
 
