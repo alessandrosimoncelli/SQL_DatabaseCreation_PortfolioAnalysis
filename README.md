@@ -12,7 +12,7 @@ Built for an Individual Final Assessment in SQL & Data Management, around a fict
 
 ## Database schema
 
-Five tables, normalized around the client and the securities they hold.
+Five tables, normalized around the client and the securities they hold. Foreign keys shown below are logical references (columns pointing to another table's primary key), not enforced `FOREIGN KEY ... REFERENCES` constraints in the DDL.
 
 ```mermaid
 erDiagram
@@ -55,7 +55,7 @@ erDiagram
   }
 ```
 
-| Table | Role | Primary key | Foreign keys |
+| Table | Role | Primary key | Foreign keys (logical) |
 |---|---|---|---|
 | `customer_details` | Client identity and category | `customer_id` | none |
 | `accounts_dim` | Accounts owned by a client | `account_id` | `customer_id` to customer_details |
@@ -63,25 +63,21 @@ erDiagram
 | `holdings_dim` | Position value and quantity per account and ticker | `account_id_ticker` | `account_id` to accounts_dim, `ticker` to security_masterlist |
 | `pricing_daily_new` | Daily adjusted close price history | `ticker_date` | `ticker` to security_masterlist |
 
+`ticker_date` alone is a valid primary key for `pricing_daily_new` because only `price_type = 'Adj Close'` rows are ever loaded, so (ticker, date) is already unique without needing price_type in the key.
+
 Full DDL, including column types and constraints, is in `sql_simoncelli_capital.sql`.
 
 ## What's in this repo
 
 ```
-sql/
-  simoncelli_capital_analysis.sql   (full schema plus 5 parameterized stored procedures)
-report/
-  Simoncelli_Capital_Portfolio_Analysis.pdf   (final client facing report with full analysis)
-data/
-  (raw price CSVs go here, see note below)
-scripts/
-  (yfinance download script goes here, see note below)
+sql_simoncelli_capital.sql        (full schema plus 5 parameterized stored procedures)
+Client_Report_PortfolioAnalysis.pdf   (final client facing report with full analysis)
 README.md
 ```
 
 ## Stored procedures
 
-Five parameterized stored procedures, with the time window passed in as an input parameter, cover the full analysis: returns (`q1_returns`), correlations (`q2_correlations`), volatility (`q3_risk`), current portfolio Sharpe ratio (`q_sharpe`), and optimized portfolio Sharpe ratio (`new_sharpe`). All logic, results, and interpretation are in the [PDF report](report/Simoncelli_Capital_Portfolio_Analysis.pdf).
+Five parameterized stored procedures, with the time window passed in as an input parameter, cover the full analysis: returns (`q1_returns`), correlations (`q2_correlations`), volatility (`q3_risk`), current portfolio Sharpe ratio (`q_sharpe`), and optimized portfolio Sharpe ratio (`new_sharpe`). All logic, results, and interpretation are in the [PDF report](Client_Report_PortfolioAnalysis.pdf).
 
 ## Data pipeline
 
